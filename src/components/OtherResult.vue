@@ -1,7 +1,6 @@
 <template>
     <div class="result">
         <h2>This is other result: {{ doubleNumber }} </h2>
-        <h2>Count click: {{ countNumber }} </h2>
     </div>
 </template>
 

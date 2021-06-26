@@ -11,8 +11,13 @@ export const store = new Vuex.Store({
     doubleNumber: (state) => {
       return state.result * 10;
     },
-    countNumber: (state) => {
-      return state.result + " times";
+  },
+  mutations: {
+    incrementStoredNumber(state, n) {
+      state.result += n;
+    },
+    decrementStoredNumber(state) {
+      state.result--;
     },
   },
 });

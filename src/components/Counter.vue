@@ -1,11 +1,12 @@
 <template>
   <div class="hello">
     <button @click="tang">Tang</button>
-    <button @click="giam">Giam</button>
+    <button @click="decrementStoredNumber">Giam</button>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   data: function(){
     return {
@@ -14,11 +15,11 @@ export default {
   },
   methods: {
     tang(){
-      return this.$store.state.result++; 
+      this.$store.commit("incrementStoredNumber", 100)
     },
-    giam(){
-      return this.$store.state.result--;
-    }
+    ...mapMutations([
+      'decrementStoredNumber', 
+    ]),
   }
 }
 </script>
