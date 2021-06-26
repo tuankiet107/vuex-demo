@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
-    <button @click="tang">Tang</button>
-    <button @click="decrementStoredNumber">Giam</button>
+    <button @click="callIncrementMutation">Tang</button>
+    <button @click="tryAsync">Giam</button>
   </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 export default {
   data: function(){
     return {
@@ -14,11 +14,9 @@ export default {
     }
   },
   methods: {
-    tang(){
-      this.$store.commit("incrementStoredNumber", 100)
-    },
-    ...mapMutations([
-      'decrementStoredNumber', 
+    ...mapActions([
+      'callIncrementMutation', 
+      'tryAsync'
     ]),
   }
 }
