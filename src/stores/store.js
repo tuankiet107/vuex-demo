@@ -11,5 +11,8 @@ export const store = new Vuex.Store({
     doubleNumber: (state) => {
       return state.result * 10;
     },
+    countNumber: (state) => {
+      return state.result + " times";
+    },
   },
 });
