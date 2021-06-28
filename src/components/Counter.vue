@@ -3,6 +3,9 @@
     <div class="title">
       <h2>Please click any button to see what happens</h2>
     </div>
+    <div class="test-bootstrap">
+      <b-button variant="outline-primary">Button Bootstrap here</b-button>
+    </div>
     <button class="btn btn-incre" @click="callIncrementMutation">Tang</button>
     <button class="btn btn-decre" @click="tryAsync">Giam</button>
   </div>
@@ -35,13 +38,13 @@ export default {
     cursor: pointer;
     padding: $paddingBtn;
     margin: 20px;
-    border: none;
-    color: #fff;
   }
   .btn-incre{
+    color: #fff;
     background-color: $backgroundBtnSuccess;
   }
   .btn-decre{
+    color: #fff;
     background-color: $backgroundBtnDanger;
   }
 }
